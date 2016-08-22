@@ -6,16 +6,27 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="icon" type="images/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="images/png" href="favicon-16x16.png" sizes="16x16" />
 </head>
 <body>
 	
-	<div class="menu" onclick="animateMenu(this)">
+	<div class="menu" onclick="openNav();">
 		<div class="bar1"></div>
 		<div class="bar2"></div>
 		<div class="bar3"></div>
 	</div>
+
+	<div id="mySidenav" class="sidenav">
+	    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	    <a href="#intro">Inicio</a>
+	    <a href="#classes">Clases</a>
+	    <a href="#studio">Instalaciones</a>
+	    <a href="#contact">Contacto</a>
+	</div>
 	
-	<div class="intro">
+	<div class="intro" id="intro">
 		<h1>Hora<br>de ser<br>increíble</h1>
 
 		<div class="logo-m">
@@ -23,32 +34,40 @@
 		</div>
 	</div>
 
-	<div class="classes">
+	<div class="classes" id="classes">
 		<div class="description">
 			Vertical es el estudio donde podrás alcanzar tus metas de una manera divertida en compañía de personal altamente calificado. ¡Eres una mujer fuerte y queremos que transmitas esa fortaleza en cada paso que des! No esperes más y ponte en contacto con nosotros, estamos seguras que nuestras rutinas se adaptarán a tu estilo de vida.
 		</div>
 		<h1>clases</h1>
 		<div class="classes-btns">
-			<div class="pole-btn">
-				<div>
-					<h2>Pole Fitness</h2>
+			<a href="">
+				<div class="pole-btn">
+					<div>
+						<h2>Pole Fitness</h2>
+					</div>
 				</div>
-			</div>
-			<div class="zumba-btn">
-				<div>
-					<h2>Zumba</h2>
+			</a>
+			<a href="">
+				<div class="gap-btn">
+					<div>
+						<h2>GAP</h2>
+					</div>
 				</div>
-			</div>
-			<div class="gap-btn">
-				<div>
-					<h2>GAP</h2>
+			</a>
+			<a href="">
+				<div class="zumba-btn">
+					<div>
+						<h2>Vertical Training</h2>
+					</div>
 				</div>
-			</div>
-			<div class="aero-btn">
-				<div>
-					<h2>Aerobics</h2>
+			</a>
+			<a href="">
+				<div class="aero-btn">
+					<div>
+						<h2>Aerobics</h2>
+					</div>
 				</div>
-			</div>
+			</a>
 		</div>
 	</div>
 
@@ -58,29 +77,113 @@
 		<div class="mark right">"</div>
 	</div>
 
-	<div class="studio">
+	<div class="studio" id="studio">
 		<h1>el studio</h1>
-		<div class="install">
-			<div>
-				<p>Instalaciones de Calidad</p>
-			</div>
-		</div>
-		<div class="imgs">
-			<div class="img1">
-				<div>
-					<p>Personal Capacitado</p>
+		<div class="img-cont">
+			<div class="install">
+				<div class="mask">
+					<p class="mask-p">Instalaciones de Calidad</p>
 				</div>
 			</div>
-			<div class="img2">
-				<div>
-					<p>¡El mejor ambiente para ti!</p>
+			<div class="imgs">
+				<div class="img1">
+					<div class="mask2">
+						<p class="mask-p">Personal Capacitado</p>
+					</div>
+				</div>
+				<div class="img2">
+					<div class="mask3">
+						<p class="mask-p">¡El mejor ambiente para ti!</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
+	<div class="contact" id="contact">
+		<h1>Contacto</h1>
+		<div class="c-cont">
+			<div class="c-info">
+				<h2>¿Quieres inscribirte?</h2>
+				<p>Llama al <strong>(444) 581 2357</strong> o visítanos en nuestra dirección:</p>
+				<p>
+					Av. Tercer Milenio #385<br>
+					San Luis Potosí, SLP.
+				</p>
+				<div class="social-media">
+					<a href="https://www.facebook.com/VerticalFitMx/" target="_blank">
+						<img src="images/facebook.svg" alt="Facebook Vertical">
+					</a>
+					<a href="https://www.instagram.com/verticalfitmx/" target="_blank">
+						<img src="images/instagram.svg" alt="Instagram Vertical">
+					</a>
+				</div>
+				<div class="c-btn" id="myBtn" onclick="document.getElementById('myModal').style.display='block'">
+					Déjanos un Mensaje
+				</div>
+			</div>
+			<div class="map">
+				
+				<div id="map" style="width:100%;height:400px">
+				
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<a href="http://www.nuva.rocks" target="_blank">
+			<img src="images/nuva.svg" alt="Desarrollado por Nuva Rocks">
+		</a>
+	</footer>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+	  <!-- Modal content -->
+	  <div class="modal-content animate">
+	    <span class="close">&times;</span>
+	    <h2>Déjanos un mensaje y pronto nos pondremos en contacto.</h2>
+	    <div class="contact-form">
+			<form method="POST" action="https://formspree.io/contacto@verticalfit.mx">
+				<input type="text" placeholder="Nombre" required class="text-input"></input>
+				<input type="email" placeholder="E-mail" required class="text-input"></input>
+				<textarea placeholder="Mensaje" rows="4" required class="text-input"></textarea> 
+				<input type="submit"  class="c-btn" value="Enviar"></input>
+				<input type="hidden" name="_next" value="thanks.html" />
+				<input type="hidden" name="_subject" value="Nuevo Mensaje" />
+			</form>
+		</div>
+	  </div>
+
+	</div>
+
 </body>
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript">
+	var mapCanvas = document.getElementById("map");
+	var myLatLng = {lat: 22.122655, lng: -101.028190};
+	var mapOptions = {
+	    center: new google.maps.LatLng(myLatLng), zoom: 16
+	};
+	var map = new google.maps.Map(mapCanvas, mapOptions);
+	var marker = new google.maps.Marker({
+	    position: myLatLng,
+	    map: map,
+	    title: 'Hello World!'
+	  });
+</script>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-62708614-1', 'auto');
+	ga('send', 'pageview');
+
+</script>
 
 </html>
