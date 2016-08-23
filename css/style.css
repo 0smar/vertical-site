@@ -344,12 +344,13 @@ html, body{
 .motivational{
 	background-color: white;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	overflow: hidden;
 	position: relative;
 	padding-top: 3em;
 	padding-bottom: 3em;
+	width: 100%;
 }
 
 .motivational .mark{
@@ -373,9 +374,7 @@ html, body{
 	color: #212121;
 	text-transform: uppercase;
 	font-size: 4em;
-	position: absolute;
 	text-align: center;
-	width: 100%;
 }
 
 .motivational .phrase span{
@@ -684,6 +683,9 @@ footer img{
 
 input[type="submit"]{
 	border: none;
+	appearance: none;
+	-webkit-appearance: none;
+   -moz-appearance:    none;
 }
 
 /* The Close Button */
@@ -816,7 +818,8 @@ input[type="submit"]{
 
 	.classes{
 		align-items: center;
-		padding: 0 2em;
+		justify-content: center;
+		padding: 0 1em;
 	}
 
 	.classes .description{
@@ -836,19 +839,19 @@ input[type="submit"]{
 	}
 
 	.classes-btns .pole-btn{
-		margin-right: 0;
+		margin: 0;
 	}
 
 	.classes-btns .zumba-btn{
-		margin-right: 0;
+		margin: 0;
 	}
 
 	.classes-btns .gap-btn{
-		margin-right: 0;
+		margin: 0;
 	}
 
 	.classes-btns .aero-btn{
-		margin-right: 0;
+		margin: 0;
 	}
 
 	.motivational .mark{
@@ -857,19 +860,26 @@ input[type="submit"]{
 
 	.motivational .left{
 		margin-left: 10px;
+		width: 20%;
 	}
 
 	.motivational .right{
-		margin-right: 40px;
+		margin-right: 0px;
 		margin-top: 120px;
+		width: 20%;
 	}
 
 	.motivational .phrase{
 		font-size: 1.6em;
+		width: 60%;
 	}
 
 	.motivational .phrase span{
 		font-family: NexaBlack;
+	}
+
+	.studio{
+		height: auto;
 	}
 
 	.studio h1{
@@ -879,6 +889,8 @@ input[type="submit"]{
 
 	.studio .img-cont{
 		flex-direction: column;
+		min-height: 300px;
+		overflow: hidden;
 	}
 
 	.studio .install{
@@ -888,6 +900,7 @@ input[type="submit"]{
 
 	.imgs{
 		width: 100%;
+		height: auto;
 	}
 
 	.contact h1{
